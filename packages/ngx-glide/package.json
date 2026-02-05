@@ -1,15 +1,15 @@
 {
   "name": "ngx-glide",
-  "version": "0.0.0",
-  "description": "Angular wrapper component of Glide carousel library",
+  "version": "21.0.0",
+  "description": "Angular 21 wrapper component of Glide carousel library",
   "peerDependencies": {
-    "@angular/common": ">=16.x",
-    "@angular/core": ">=16.x",
+    "@angular/common": ">=21.0.0",
+    "@angular/core": ">=21.0.0",
     "@glidejs/glide": "3.x"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avivharuzi/ngx-glide.git"
+    "url": "git+https://github.com/Astroluset/ngx-glide.git"
   },
   "keywords": [
     "angular",
@@ -18,14 +18,14 @@
     "slider",
     "carousel"
   ],
-  "author": "Aviv Haruzi <avivharuzi@gmail.com>",
+  "author": "Astroluset",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/avivharuzi/ngx-glide/issues"
+    "url": "https://github.com/Astroluset/ngx-glide/issues"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
-  "homepage": "https://github.com/avivharuzi/ngx-glide#readme"
+  "homepage": "https://github.com/Astroluset/ngx-glide#readme"
 }

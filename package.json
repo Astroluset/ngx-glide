@@ -1,6 +1,6 @@
 {
   "name": "ngx-glide",
-  "version": "16.0.0",
+  "version": "21.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "nx",
@@ -9,7 +9,9 @@
     "release": "semantic-release",
     "start:ngx-glide-demo": "nx serve ngx-glide-demo",
     "build:ngx-glide-demo": "nx build ngx-glide-demo --base-href=\"/ngx-glide/\"",
-    "build:ngx-glide": "nx build ngx-glide && cp README.md dist/packages/ngx-glide && cp LICENSE dist/packages/ngx-glide",
+    "build:ngx-glide": "nx build ngx-glide && copy README.md dist\\packages\\ngx-glide && copy LICENSE dist\\packages\\ngx-glide",
+    "publish:ngx-glide": "npm run build:ngx-glide && cd dist\\packages\\ngx-glide && npm publish",
+    "publish:ngx-glide-dry": "npm run build:ngx-glide && cd dist\\packages\\ngx-glide && npm publish --dry-run",
     "build:all": "nx run-many --target=build --all --parallel --maxParallel=3",
     "affected:lint": "nx affected --target=lint --parallel --maxParallel=3",
     "affected:test": "nx affected --target=test --parallel --maxParallel=3",

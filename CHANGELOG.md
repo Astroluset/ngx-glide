@@ -1,3 +1,23 @@
+# [21.0.0](https://github.com/Astroluset/ngx-glide/compare/16.0.0...21.0.0) (2026-02-05)
+
+### BREAKING CHANGES
+
+- 🧨 **Angular 21 Support**: Updated to support Angular 21 only
+- 🧨 **Minimum Requirements**: Angular 21+ is now required
+- 🧨 **Dependencies**: Updated all dependencies to Angular 21 compatible versions
+
+### Features
+
+- ✨ **Sass @use**: Migrated from deprecated @import to modern @use syntax
+- ✨ **Webpack 5**: Full compatibility with Angular 21 and Webpack 5
+- ✨ **Build Configuration**: Updated build pipeline for Angular 21
+
+### Bug Fixes
+
+- 🐛 Fixed Sass deprecation warnings by using @use instead of @import
+- 🐛 Updated build configuration to properly include .scss extensions
+- 🐛 Resolved module import path issues for Glide.js stylesheets
+
 # [16.0.0](https://github.com/avivharuzi/ngx-glide/compare/15.0.0...16.0.0) (2023-09-23)
 
 ### chore
