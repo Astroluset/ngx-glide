@@ -7,9 +7,8 @@ Angular wrapper component of [Glide](https://glidejs.com) carousel library.
 ## ⚠️ Angular 21 Only
 
 This version (21.x.x) supports **Angular 21 only**. For older Angular versions, please use the appropriate version:
-- For Angular 16: use ngx-glide@16.x.x
-- For Angular 15: use ngx-glide@15.x.x
-- For Angular 14: use ngx-glide@14.x.x
+- For Angular 16 and lower use avivharuzi/ngx-glide
+- Versions 17 - 20 are not supported.
 
 ## Environment Support
 
@@ -52,17 +51,9 @@ Add scss files to the `styles` section of your `angular.json` or `project.json`:
 
 ```json
 "styles": [
-  "src/styles.scss",
   "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss",
   "node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss"
 ],
-```
-
-You can either import the `styles` files into main scss file:
-
-```scss
-@use '@glidejs/glide/src/assets/sass/glide.core' as *;
-@use '@glidejs/glide/src/assets/sass/glide.theme' as *;
 ```
 
 Import `NgxGlideModule` into the current module's imports:
