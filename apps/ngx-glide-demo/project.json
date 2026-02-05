@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/ngx-glide-demo/src",
   "prefix": "ngx-glide-demo",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -19,7 +20,11 @@
           "apps/ngx-glide-demo/src/favicon.ico",
           "apps/ngx-glide-demo/src/assets"
         ],
-        "styles": ["apps/ngx-glide-demo/src/styles.scss"],
+        "styles": [
+          "apps/ngx-glide-demo/src/styles.scss",
+          "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss",
+          "node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,18 +58,19 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "ngx-glide-demo:build:production"
+          "buildTarget": "ngx-glide-demo:build:production"
         },
         "development": {
-          "browserTarget": "ngx-glide-demo:build:development"
+          "buildTarget": "ngx-glide-demo:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "ngx-glide-demo:build"
+        "buildTarget": "ngx-glide-demo:build"
       }
     },
     "lint": {
@@ -82,15 +88,8 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/ngx-glide-demo/jest.config.ts",
-        "passWithNoTests": true
-      },
-      "configurations": {
-        "ci": {
-          "ci": true,
-          "codeCoverage": true
-        }
+        "tsConfig": "apps/ngx-glide-demo/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }
