@@ -1,4 +1,4 @@
-import { JsonPipe, NgForOf, NgIf } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,8 +16,6 @@ import { ImgPipe } from '../shared/img.pipe';
 @Component({
   standalone: true,
   imports: [
-    NgIf,
-    NgForOf,
     FormsModule,
     JsonPipe,
     ImgPipe,
@@ -28,8 +26,8 @@ import { ImgPipe } from '../shared/img.pipe';
     MatInputModule,
     MatProgressSpinnerModule,
     MatSelectModule,
-    MatSlideToggleModule,
-  ],
+    MatSlideToggleModule
+],
   selector: 'ngx-glide-demo-backdrops',
   templateUrl: './backdrops.component.html',
   styleUrls: ['./backdrops.component.scss'],

@@ -4,9 +4,15 @@ Angular wrapper component of [Glide](https://glidejs.com) carousel library.
 
 ![npm](https://img.shields.io/npm/v/ngx-glide) ![NPM](https://img.shields.io/npm/l/ngx-glide) ![npm bundle size](https://img.shields.io/bundlephobia/min/ngx-glide)
 
+## ⚠️ Angular 21 Only
+
+This version (21.x.x) supports **Angular 21 only**. For older Angular versions, please use the appropriate version:
+- For Angular 16 and lower use avivharuzi/ngx-glide
+- Versions 17 - 20 are not supported.
+
 ## Environment Support
 
-- Angular 6+
+- Angular 21+
 - Server-side Rendering
 
 ## Compatibility
@@ -15,20 +21,25 @@ Versions compatibility list:
 
 | ngx-glide | Angular       | @glidejs/glide |
 | --------- | ------------- | -------------- |
-| 16.x.x    | 16.x.x        | 3.x.x          |
-| 15.x.x    | 15.x.x        | 3.x.x          |
-| 14.x.x    | 14.x.x        | 3.x.x          |
-| 13.x.x    | 13.x.x        | 3.x.x          |
-| 12.x.x    | 12.x.x        | 3.x.x          |
-| 11.x.x    | 11.x.x        | 3.x.x          |
-| 10.x.x    | 10.x.x        | 3.x.x          |
-| 1.x.x     | 6.x.x - 9.x.x | 3.x.x          |
+| 21.x.x    | 21.x.x        | 3.x.x          |
 
 ## Installation
 
 ```sh
-npm i @glidejs/glide@3 ngx-glide
+npm i @glidejs/glide@3 ngx-glide@21
 ```
+
+## Migration from Previous Versions
+
+### Breaking Changes in v21.0.0
+
+1. **Angular 21 Required**: This version requires Angular 21+
+2. **Sass @import Deprecated**: Use `@use` syntax instead of `@import`
+3. **Build Configuration**: Update your build configuration as shown below
+
+### Updating Your Build Configuration
+
+Make sure your `angular.json` or `project.json` includes the proper .scss extensions:
 
 ## Demo
 
@@ -36,21 +47,13 @@ npm i @glidejs/glide@3 ngx-glide
 
 ## Usage
 
-Add scss files to the `styles` section of your `angular.json`:
+Add scss files to the `styles` section of your `angular.json` or `project.json`:
 
 ```json
 "styles": [
-  "src/styles.scss",
-  "node_modules/@glidejs/glide/src/assets/sass/glide.core",
-  "node_modules/@glidejs/glide/src/assets/sass/glide.theme"
+  "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss",
+  "node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss"
 ],
-```
-
-You can either import the `styles` files into main scss file:
-
-```scss
-@use '@glidejs/glide/src/assets/sass/glide.core' as *;
-@use '@glidejs/glide/src/assets/sass/glide.theme' as *;
 ```
 
 Import `NgxGlideModule` into the current module's imports:

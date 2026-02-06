@@ -8,31 +8,31 @@
     class="glide__arrows"
     data-glide-el="controls"
     [style.display]="showArrows ? 'block' : 'none'"
-  >
+    >
     <button
       class="glide__arrow glide__arrow--left"
       data-glide-dir="<"
       [style.display]="getStyleDisplay(!arrowLeftTemplate)"
-    >
+      >
       {{ arrowLeftLabel }}
     </button>
     <button
       class="glide__arrow glide__arrow--right"
       data-glide-dir=">"
       [style.display]="getStyleDisplay(!arrowRightTemplate)"
-    >
+      >
       {{ arrowRightLabel }}
     </button>
     <div
       data-glide-dir="<"
       [style.display]="getStyleDisplay(!!arrowLeftTemplate)"
-    >
+      >
       <ng-container *ngTemplateOutlet="arrowLeftTemplate"></ng-container>
     </div>
     <div
       data-glide-dir=">"
       [style.display]="getStyleDisplay(!!arrowRightTemplate)"
-    >
+      >
       <ng-container *ngTemplateOutlet="arrowRightTemplate"></ng-container>
     </div>
   </div>
@@ -40,13 +40,15 @@
     class="glide__bullets"
     data-glide-el="controls[nav]"
     [style.display]="showBullets ? 'block' : 'none'"
-  >
-    <ng-container *ngIf="glideBullets">
-      <button
-        *ngFor="let glideBullet of glideBullets"
-        class="glide__bullet"
+    >
+    @if (glideBullets) {
+      @for (glideBullet of glideBullets; track glideBullet) {
+        <button
+          class="glide__bullet"
         [attr.data-glide-dir]="'=' + glideBullet"
       ></button>
-    </ng-container>
+}
+    
+}
   </div>
 </div>
