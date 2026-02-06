@@ -1,5 +1,5 @@
 {
-  "name": "ngx-glide",
+  "name": "@astroluset/ngx-glide",
   "version": "21.0.0",
   "description": "Angular 21 wrapper component of Glide carousel library",
   "peerDependencies": {
